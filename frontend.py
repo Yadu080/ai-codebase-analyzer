@@ -1,5 +1,9 @@
 import streamlit as st
 import requests
+from app.architecture import build_dependency_graph
+import networkx as nx
+import matplotlib.pyplot as plt
+import os
 
 API_URL = "http://127.0.0.1:8000"
 
@@ -416,6 +420,23 @@ if st.button("⟶  Analyze Repository"):
                 {modules_html}
             </div>
             """, unsafe_allow_html=True)
+            repo_name = repo_url.split("/")[-1]
+            repo_path = os.path.join("data", repo_name)
+            graph = build_dependency_graph(repo_path)
+            st.subheader("Repository Dependency Graph")
+
+            for file, deps in graph.items():
+                st.write(f"{file} → {deps}")
+            G = nx.DiGraph()
+
+            for file, deps in graph.items():
+                for dep in deps:
+                    G.add_edge(file, dep)
+
+            fig, ax = plt.subplots()
+            nx.draw(G, with_labels=True, node_size=2000, node_color="lightblue", ax=ax)
+
+            st.pyplot(fig)
 
         else:
             st.error("✗ Failed to analyze repository. Check the URL and try again.")
