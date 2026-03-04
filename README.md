@@ -122,7 +122,7 @@ Repository Ready for Queries
 
 ---
 
-## Optional Architecture Analysis
+## Architecture Analysis
 
 The project also includes a static analysis component using Python AST.
 
