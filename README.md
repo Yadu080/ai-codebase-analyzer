@@ -215,6 +215,11 @@ The Streamlit interface will open in your browser.
 
 ---
 
+## Screenshot
+
+[![Screenshot-2026-03-04-at-10-22-45-PM.png](https://i.postimg.cc/7hbnpZPf/Screenshot-2026-03-04-at-10-22-45-PM.png)](https://postimg.cc/xNDmmYz2)
+
+
 ## Example Usage
 
 1. Enter a GitHub repository URL
