@@ -8,6 +8,12 @@ AI Codebase Analyzer
 A Retrieval-Augmented Generation system for understanding and analyzing software repositories.
 </p>
 
+---
+## Technologies Used
+
+<p align="center"> <img src="https://skillicons.dev/icons?i=python,fastapi,streamlit" /> </p> <p align="center"> <img src="https://img.shields.io/badge/FAISS-Vector%20Search-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/SentenceTransformers-Embeddings-green?style=for-the-badge" /> <img src="https://img.shields.io/badge/Groq-LLM-orange?style=for-the-badge" /> <img src="https://img.shields.io/badge/Python-AST-lightgrey?style=for-the-badge" /> </p>
+---
+
 The system analyzes a GitHub repository by cloning it, extracting source files, generating semantic embeddings for code chunks, and indexing them using FAISS. When a user asks a question, the system retrieves the most relevant code segments and provides an explanation using a language model.
 
 This project demonstrates how vector search and language models can be combined to analyze and explain large codebases.
@@ -240,10 +246,7 @@ Example questions:
 
 ---
 
-## Technologies Used
 
-<p align="center"> <img src="https://skillicons.dev/icons?i=python,fastapi,streamlit" /> </p> <p align="center"> <img src="https://img.shields.io/badge/FAISS-Vector%20Search-blue?style=for-the-badge" /> <img src="https://img.shields.io/badge/SentenceTransformers-Embeddings-green?style=for-the-badge" /> <img src="https://img.shields.io/badge/Groq-LLM-orange?style=for-the-badge" /> <img src="https://img.shields.io/badge/Python-AST-lightgrey?style=for-the-badge" /> </p>
----
 
 ## Limitations
 
